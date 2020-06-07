@@ -1,0 +1,20 @@
+<div *ngIf="ticket">
+    <h2> Create Ticket</h2>
+    <div><span>id: </span>{{ticket.accountId}}</div>
+    <div>
+      <label>Title:
+        <input [(ngModel)]="ticket.title" placeholder="title"/>
+      </label>
+      <label>Description:
+        <input [(ngModel)]="ticket.text" placeholder="text"/>
+      </label>
+      <label>Category:
+        <input [(ngModel)]="ticket.category" placeholder="category"/>
+      </label>
+     
+    </div>
+    <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+  </div>
+
+  

@@ -1,0 +1,33 @@
+<h2>My Accounts</h2>
+
+
+
+<ul class="heroes">
+  <li *ngFor="let account of accounts">
+    <a routerLink="/createTicket/{{account.id}}">
+      <span class="badge">{{account.id}}</span>
+      {{account.firstname}}
+      {{account.lastname}}
+      <button class="createTickets" title="Create ticket">Create ticket</button>
+    </a>
+    
+    <button class="findTickets" title="Find tickets"(click)="findTickets(account)">Find tickets</button>
+    
+  </li>
+</ul>
+
+1. click for more details
+2. create ticket 
+3. find tickets
+
+ <!-- <ul class="heroes">
+  <li *ngFor="let account of accounts">
+    <a routerLink="/detail/{{account.id}}">
+      {{account.firstname}}
+      {{account.customerId}}
+      {{account.lastname}}
+    </a>
+   
+  </li>
+</ul> -->
+
